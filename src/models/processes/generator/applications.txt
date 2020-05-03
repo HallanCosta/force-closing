@@ -1,0 +1,11 @@
+chrome.exe
+cpuz_x64.exe
+K10STAT.exe
+sublime_text.exe
+Code.exe
+robo3t.exe
+Docker Desktop.exe
+git-bash.exe
+notepad.exe
+Insomnia.exe
+Teams.exe

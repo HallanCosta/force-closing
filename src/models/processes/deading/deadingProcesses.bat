@@ -1,19 +1,14 @@
 @ECHO off
 
-ECHO:
-
 SET processTotal=0
 SET processesDead=0
 SET processesNotFind=0
 
-
-ECHO KILLING THE PROCESS...
+ECHO KILLING THE PROCESSES...
 
 ECHO:
 
-FOR /L %%i IN (0,1,%processName["total"]%) DO (
-	
-	SETLOCAL EnableDelayedExpansion
+FOR /L %%i IN (0,1,%countProcesses%) DO (
 
 	FOR /F "tokens=1,*" %%n IN ("!processName[%%i]!") DO (
 		SET pCommand[%%i]=TASKLIST /fi "IMAGENAME eq %%n" 	
@@ -33,26 +28,12 @@ FOR /L %%i IN (0,1,%processName["total"]%) DO (
 	) ELSE (
 		
 		ECHO %%i - !pFindName[%%i]! was dead
-		TASKKILL -f -t -im !pFindName[%%i]! > nul
+		rem TASKKILL -f -t -im !pFindName[%%i]! > nul
 		SET /A processesDead=processesDead+1
 		SET /A processTotal=processTotal+1
 	
 	)
 
-	SETLOCAL DisableDelayedExpansion
-
 )
 
-ECHO:
-ECHO **************************
-ECHO  ALL WERE DEAD PROCESSES *
-ECHO **************************
-ECHO:
-
-ECHO Total Process: %processTotal%
-ECHO Process Dead: %processesDead%
-ECHO Process not found: %processesNotFind%
-
-ECHO:
-
-Pause
+SETLOCAL DisableDelayedExpansion

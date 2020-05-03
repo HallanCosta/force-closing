@@ -1,7 +1,6 @@
 @ECHO off
 
 COLOR 02
-chcp 1252
 
 cls
 

@@ -1,33 +1,42 @@
 @ECHO off
-rem ECHO processesController EXECUTED
+rem CONTROLLER THE PROCESSES
 ECHO:
-rem Expand variables
 
-rem State the total number of processes eg: 9 OBS: including 0 as a process Declare the total number of processes eg: 9 OBS: including 0 as a process
+SETLOCAL EnableDelayedExpansion
 
-SET processName["total"]=10
-SET processName["errorImplements"]=
-SET processName[0]=chrome.exe
-SET processName[1]=cpuz_x64.exe
-SET processName[2]=K10STAT.exe
-SET processName[3]=sublime_text.exe
-SET processName[4]=Code.exe
-SET processName[5]=robo3t.exe
-SET processName[6]=Docker Desktop.exe
-SET processName[7]=git-bash.exe
-SET processName[8]=notepad.exe
-SET processName[9]=Insomnia.exe
-SET processName[10]=Teams.exe
+rem SET processName["total"]=10
+rem SET processName["errorImplements"]=
+rem SET processName[0]=chrome.exe
 
-FOR /L %%i IN (0,1,%processName["total"]%) DO (
-	IF DEFINED processName[%%i] (
+
+CALL src/models/processes/generator/processesName.bat
+
+SET /A n=0
+
+FOR /L %%i IN (0,1,%countProcesses%) DO (
+	IF DEFINED processName[!n!] (
 		SET processName["errorImplements"]=All processes were found!
 	) ELSE (
 		SET processName["errorImplements"]=Did you forget to implement any process
+		EXIT
 	)
+	SET /A n+=1
 )
-
 ECHO %processName["errorImplements"]%
+
+ECHO:
+
+CALL src/models/processes/deading/deadingProcesses.bat
+
+ECHO:
+ECHO ****************************
+ECHO  ALL PROCESSES WERE KILLED *
+ECHO ****************************
+ECHO:
+
+ECHO Total Processes: %processTotal%
+ECHO Processes Dead: %processesDead%
+ECHO Processes not found: %processesNotFind%
 
 ECHO:
 
