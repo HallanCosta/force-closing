@@ -28,7 +28,7 @@ FOR /L %%i IN (0,1,%countProcesses%) DO (
 	) ELSE (
 		
 		ECHO %%i - !pFindName[%%i]! was dead
-		rem TASKKILL -f -t -im !pFindName[%%i]! > nul
+		TASKKILL -f -t -im !pFindName[%%i]! > nul
 		SET /A processesDead=processesDead+1
 		SET /A processTotal=processTotal+1
 	
