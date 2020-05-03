@@ -1,2 +1,2 @@
-# force-closing
+# ForceClosing
 Kills windows processes
