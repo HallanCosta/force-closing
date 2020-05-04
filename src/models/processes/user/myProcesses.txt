@@ -8,4 +8,4 @@ Docker Desktop.exe
 git-bash.exe
 notepad.exe
 Insomnia.exe
-Teams.exe
+Teams.exeTeams.exe
