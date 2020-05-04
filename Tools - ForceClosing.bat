@@ -3,4 +3,4 @@
 COLOR 02
 chcp 65001
 
-CALL src/mainForceClosing.bat
+CALL src/mainTools.bat

@@ -4,7 +4,7 @@ COLOR 2
 
 ECHO:
 
-CALL src/controllers/processesController.bat
+CALL src/controllers/forceClosingController.bat
 
 CALL src/about.bat
 
