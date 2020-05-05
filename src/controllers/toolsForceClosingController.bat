@@ -44,10 +44,18 @@ rem GOTO :main
 
 
 
-
 :delete
 CLS
 ECHO Tools - ForceClosing nunca deletará processos de seu sistema, somente processos que você registrou na base de dados.
+
+IF NOT EXIST %processesDir% (
+	ECHO:
+	ECHO Base de dados não criada.
+	ECHO:
+
+	PAUSE
+	EXIT
+)
 
 ECHO:
 SET /P responseDelete=Escolha(1 - Deletar linha do processo / 2 - Deletar todos os processos): 

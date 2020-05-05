@@ -2,6 +2,15 @@
 COLOR 02
 REM GENERATOR THE PROCESSES
 
+IF NOT EXIST %processesDir% (
+	
+	ECHO Nenhum registro ainda não foi criado.
+	ECHO:
+
+	PAUSE
+	EXIT
+)
+
 SET /A n=0
 SET /A countProcesses=0
 
