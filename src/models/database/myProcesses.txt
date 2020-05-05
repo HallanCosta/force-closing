@@ -1,0 +1,6 @@
+chrome.exe
+sublime_text.exe
+league_of_legends.exe
+arenaofvalor.exe
+warface.exe
+fortnite.exe

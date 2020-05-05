@@ -1,12 +1,21 @@
 @ECHO off
 
-ECHO:
-
 SET /A processTotal=0
+
 :question
 
+ECHO:
 
 SET /P processName=Digite o nome do processo.exe: 
+
+IF [%processName%] EQU [] (
+	ECHO:
+	ECHO Você não poder inserir um valor vazio!
+	ECHO:
+	PAUSE
+	CLS
+	GOTO :question
+)
 
 ECHO:
 

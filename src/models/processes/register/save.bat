@@ -1,11 +1,10 @@
 @ECHO off
+ECHO:
 
 SET /A countArr=%processTotal%-1
 IF %processTotal% GTR 0 (
 	
 	CLS
-
-	SETLOCAL EnableDelayedExpansion
 	
 	ECHO:
 
@@ -16,14 +15,12 @@ IF %processTotal% GTR 0 (
 	REM SAVE .TXT
 	FOR /L %%i IN (0,1,%countArr%) DO (
 		ECHO !processName[%%i]!
-	) >> src/models/processes/user/myProcesses.txt
+	) >> %processesDir%
 
 	REM USER NOTIFICATION
 	FOR /L %%i IN (0,1,%countArr%) DO (
 		ECHO %%i - !processName[%%i]!
 	)
-
-	SETLOCAL DisableDelayedExpansion
 	
 	ECHO:
 

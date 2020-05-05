@@ -1,13 +1,10 @@
 @ECHO off
 rem CONTROLLER KILLED THE PROCESSES
-ECHO:
-
 SETLOCAL EnableDelayedExpansion
 
-rem SET processName["total"]=10
-rem SET processName["errorImplements"]=
-rem SET processName[0]=chrome.exe
 
+ECHO:
+SET processesDir=src/models/database/myProcesses.txt
 
 CALL src/models/processes/generator/processesName.bat
 
@@ -18,6 +15,7 @@ FOR /L %%i IN (0,1,%countProcesses%) DO (
 		SET processName["errorImplements"]=All processes were found!
 	) ELSE (
 		SET processName["errorImplements"]=Did you forget to implement any process
+		PAUSE
 		EXIT
 	)
 	SET /A n+=1
@@ -37,9 +35,9 @@ ECHO:
 ECHO Total Processes: %processTotal%
 ECHO Processes Dead: %processesDead%
 ECHO Processes not found: %processesNotFind%
-
 ECHO:
 
+ENDLOCAL
 Pause
 
 ECHO:

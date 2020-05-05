@@ -36,4 +36,3 @@ FOR /L %%i IN (0,1,%countProcesses%) DO (
 
 )
 
-SETLOCAL DisableDelayedExpansion

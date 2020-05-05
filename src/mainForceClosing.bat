@@ -6,7 +6,7 @@ ECHO:
 
 CALL src/controllers/forceClosingController.bat
 
-CALL src/about.bat
+CALL src/models/about/about.bat
 
 TASKKILL -f -t -im cmd.exe 
 EXIT

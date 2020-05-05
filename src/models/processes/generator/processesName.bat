@@ -1,8 +1,6 @@
 @ECHO off
 COLOR 02
-REM GENERATING PROCESSES
-SET processesDir=src/models/processes/user/myProcesses.txt
-SET processes["errorImplements"]=
+REM GENERATOR THE PROCESSES
 
 SET /A n=0
 SET /A countProcesses=0
