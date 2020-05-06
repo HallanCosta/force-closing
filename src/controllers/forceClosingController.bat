@@ -12,7 +12,6 @@ SET /A n=0
 FOR /L %%i IN (0,1,%countProcesses%) DO (
 	IF DEFINED processName[!n!] (
 		SET processName["errorImplements"]=All processes were found!
-		PAUSE
 	) ELSE (
 		SET processName["errorImplements"]=Did you forget to implement any process
 		PAUSE
@@ -21,6 +20,10 @@ FOR /L %%i IN (0,1,%countProcesses%) DO (
 	SET /A n+=1
 )
 ECHO %processName["errorImplements"]%
+
+ECHO:
+
+PAUSE
 
 ECHO:
 
