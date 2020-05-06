@@ -8,7 +8,7 @@ SET /p responseDeleteAllProcesses=Você tem certeza que deseja deletar a base de
 
 IF %responseDeleteAllProcesses% EQU s (
 
-	DEL /q > nul %processesDir%
+	DEL /f /q > nul %processesDir%
 
 	ECHO:
 	ECHO Base de dados deletada com Sucesso.

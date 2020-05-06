@@ -6,7 +6,7 @@ ECHO Ola seja bem-vindo, Registre um processo(programa/software), Caso tenha duv
 
 :main
 CLS
-SET processesDir=src\models\database\myProcesses.txt
+SET processesDir=\ForceClosing\src\models\database\myProcesses.txt
 
 ECHO:
 
@@ -21,24 +21,22 @@ IF %resposeUser% EQU 4 GOTO :help
 :register
 cls
 
-CALL src/models/processes/register/question.bat
-CALL src/models/processes/register/save.bat
+CALL /ForceClosing/src/models/processes/register/question.bat
+CALL /ForceClosing/src/models/processes/register/save.bat
 
 ECHO:
 PAUSE
 EXIT
-rem GOTO :main
 
 
 
 :showAllProcesses
-CALL src/models/processes/user/showAllProcesses.bat
+CALL /ForceClosing/src/models/processes/user/showAllProcesses.bat
 
 
 ECHO:
 PAUSE
 EXIT
-rem GOTO :main
 
 
 
@@ -66,18 +64,16 @@ IF %responseDelete% EQU 2 GOTO :deleteAllProcesses
 
 
 :deleteLine
-CALL src/models/processes/delete/deleteLine.bat
+CALL /ForceClosing/src/models/processes/delete/deleteLine.bat
 
 ECHO:
 PAUSE
 EXIT
-rem GOTO :main
 
 
 :deleteAllProcesses
-CALL src/models/processes/delete/deleteAllProcesses.bat
+CALL /ForceClosing/src/models/processes/delete/deleteAllProcesses.bat
 
-rem GOTO :main
 
 
 
@@ -96,14 +92,14 @@ IF %responseHelp% EQU 2 GOTO :possibleProblem
 ECHO:
 
 :howToRegister
-CALL src/models/processes/help/howToRegister.bat
+CALL /ForceClosing/src/models/processes/help/howToRegister.bat
 ECHO:
 PAUSE
 GOTO :help
 
 
 :possibleProblem
-CALL src/models/processes/help/possibleProblem.bat
+CALL /ForceClosing/src/models/processes/help/possibleProblem.bat
 ECHO:
 PAUSE
 GOTO :help

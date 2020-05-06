@@ -1,1 +1,0 @@
-Talvez seja necessario trocar o diretório dos atalhos, clicando o botão direito do mouse em Propriedades

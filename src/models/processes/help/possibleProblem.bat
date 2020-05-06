@@ -6,6 +6,10 @@ ECHO Problemas possíveis
 
 ECHO:
 
+ECHO Dica: não esqueça de sempre executar como administrador!
+
+ECHO:
+
 ECHO Se ocorrer alguns problemas siga os seguintes passos.
 
 ECHO:

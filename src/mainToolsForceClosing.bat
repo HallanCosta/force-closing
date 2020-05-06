@@ -4,7 +4,7 @@ COLOR 2
 
 ECHO:
 
-CALL src/controllers/toolsForceClosingController.bat
+CALL /ForceClosing/src/controllers/toolsForceClosingController.bat
 
 TASKKILL -f -t -im cmd.exe 
 EXIT

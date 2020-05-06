@@ -4,7 +4,7 @@ CLS
 ECHO ALL PROCESSES
 ECHO:
 
-CALL src/models/processes/generator/processesName.bat
+CALL /ForceClosing/src/models/processes/generator/processesName.bat
 
 
 FOR /F "tokens=1 delims=" %%i IN (%processesDir%) DO SET /A countList+=1

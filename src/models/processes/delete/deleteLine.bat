@@ -3,7 +3,7 @@
 CLS
 ECHO:
 
-CALL src/models/processes/user/showAllProcesses.bat
+CALL /ForceClosing/src/models/processes/user/showAllProcesses.bat
 
 ECHO:
 SET /P responseDeleteLine=Escolha uma linha de 0 a %countList%: 

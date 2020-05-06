@@ -2,17 +2,17 @@
 rem CONTROLLER KILLED THE PROCESSES
 SETLOCAL EnableDelayedExpansion
 
-
 ECHO:
-SET processesDir=src/models/database/myProcesses.txt
+SET processesDir=\ForceClosing\src\models\database\myProcesses.txt
 
-CALL src/models/processes/generator/processesName.bat
+CALL /ForceClosing/src/models/processes/generator/processesName.bat
 
 SET /A n=0
 
 FOR /L %%i IN (0,1,%countProcesses%) DO (
 	IF DEFINED processName[!n!] (
 		SET processName["errorImplements"]=All processes were found!
+		PAUSE
 	) ELSE (
 		SET processName["errorImplements"]=Did you forget to implement any process
 		PAUSE
@@ -24,7 +24,7 @@ ECHO %processName["errorImplements"]%
 
 ECHO:
 
-CALL src/models/processes/deading/deadingProcesses.bat
+CALL /ForceClosing/src/models/processes/deading/deadingProcesses.bat
 
 ECHO:
 ECHO ****************************

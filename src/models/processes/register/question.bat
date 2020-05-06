@@ -29,7 +29,6 @@ IF %responseQuestion% EQU s (
 	GOTO :question
 	PAUSE
 ) ELSE (
-
 	SET processName[%processTotal%]=%processName%
 	SET /A processTotal+=1
 )
