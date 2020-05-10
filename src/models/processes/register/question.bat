@@ -8,9 +8,9 @@ ECHO:
 
 SET /P processName=Digite o nome do processo.exe: 
 
-IF [%processName%] EQU [] (
+IF ["%processName%"] EQU [""] (
 	ECHO:
-	ECHO Você não poder inserir um valor vazio!
+	ECHO Você não pode inserir um valor vazio!
 	ECHO:
 	PAUSE
 	CLS

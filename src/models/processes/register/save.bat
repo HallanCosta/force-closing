@@ -2,6 +2,7 @@
 ECHO:
 
 SET /A countArr=%processTotal%-1
+
 IF %processTotal% GTR 0 (
 	
 	CLS

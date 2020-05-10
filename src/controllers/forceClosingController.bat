@@ -9,6 +9,13 @@ CALL /ForceClosing/src/models/processes/generator/processesName.bat
 
 SET /A n=0
 
+IF NOT DEFINED processName[!n!] (
+	ECHO Nenhum registro ainda não foi criado.
+	ECHO:
+	PAUSE
+	EXIT
+)
+
 FOR /L %%i IN (0,1,%countProcesses%) DO (
 	IF DEFINED processName[!n!] (
 		SET processName["errorImplements"]=All processes were found!
